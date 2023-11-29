@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100%;
+            height: 95vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .txt{
+            width:400px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            padding: 10px;
+
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        #btn{
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            border: 2px solid black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            background-color: rgb(185, 182, 182);
+            color: whitesmoke;
+
+
+        }
+    </style>
+</head>
+<body>
+    <section class="box">
+        <div class="row"><h2 class="txt"></h2></div>
+        <button id="btn" onclick="func1()">CLICK ME</button>
+    </section>
+
+    <script>
+        function randomMaker(){
+            let x = (Math.random())*256
+            x = Math.floor(x)
+            return x
+
+        }
+        function func1(){
+            let r = randomMaker()
+            let g = randomMaker()
+            let b = randomMaker()
+            document.getElementsByClassName('box')[0].style.background = `rgb(${r},${g},${b})`
+            document.getElementsByClassName('txt')[0].innerText = `background : # ${r},${g},${b}`
+            document.getElementById('btn').style.color = `rgb(${r},${g},${b})`
+
+        }
+    </script>
+    
+    
+</body>
+</html>
