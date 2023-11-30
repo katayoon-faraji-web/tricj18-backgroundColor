@@ -6,7 +6,7 @@
 
 - 🗓️Created - 2023-11-20
 
-- 💻Technologies Used - Html , Css , Tailwind ,Sass
+- 💻Technologies Used - Html , Css , Sass , Javascript
 
 - Responsive
   
